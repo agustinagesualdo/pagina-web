@@ -1,0 +1,192 @@
+/* TODO EL DOC */
+#fondo {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: rgb(97, 97, 97);
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f0f0f0;
+}
+
+
+/* BARRA DE NAVEGACIÓN */
+#contenedor{
+    background-color: white;
+}
+
+#sticky{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+.navbar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: rgb(97, 97, 97);
+}
+.container-fluid {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.nav-item a{
+    display: block;
+    margin: 0px 15px;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+}
+
+.nav-item a:hover {
+    text-decoration:underline;
+}
+
+
+#logo img{
+    width:100px;
+    height:70%;
+}
+
+#carrito img {
+    height: 80px;
+}
+#usuario img {
+    height: 80px;
+}
+
+/*MENU DESPLEGABLE*/
+.offcanvas-start {
+    width: 250px; 
+    background-color: white; 
+}
+
+@media (max-width:640px){
+    #hamburguesa { order: 0; }
+    #logo { order: 1; }
+    #usuario { order: 2; }
+    #carrito { order: 3; }
+    #navbarSupportedContent { order: 4; }
+
+    #logo, #usuario, #carrito {
+        margin: 0 5px;
+    }
+
+    .container-fluid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width:641px){
+    #hamburguesa { order: 0; } 
+    #logo { order: 0; }
+    #navbarSupportedContent { order: 1; }
+    #usuario { order: 2; }
+    #carrito { order: 3; }
+
+    .container-fluid {
+        justify-content: space-between;
+    }
+
+}
+
+#hamburguesa{
+    border:0px;
+}
+
+#hamburguesa:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+/* PORTADA DE LA PÁGINA WEB*/
+#portada {
+    overflow: hidden;
+    height: 100%;
+}
+
+@media (max-width:640px){
+    #portada img{
+    width: 200%;
+    margin-left:-50px;
+    }
+}
+
+
+@media (min-width:641px){
+    #portada img{
+    width: 100%;
+}
+}
+
+
+/* SECCIÓN PRODUCTOS */
+#fotos-inicio {
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.sinborde{
+    border:0px;
+}
+
+#fotos-inicio h1{
+    font-family: "Poppins", sans-serif;
+    color: rgb(97, 97, 97);
+    font-weight: 600;
+    font-size: 160%;
+    text-align: center;
+    font-style: normal;
+}
+
+#boton1, #boton2, #boton3, #boton4{
+    background-color: #f0f0f0;
+    border:0px;
+    color: rgb(97, 97, 97);
+}
+
+@media (max-width:640px){
+    .card{
+        max-width: 60%;
+        margin: 10px auto;
+        text-align: center;
+    }
+    
+}
+
+@media (min-width:641px){
+    .card{
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+/*FOOTER Y CONTACTO*/
+footer{
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    color: rgb(97, 97, 97);
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: rgb(224, 224, 224);
+}
