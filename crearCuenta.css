@@ -6,7 +6,7 @@
     color: rgb(97, 97, 97);
     font-weight: 400;
     font-style: normal;
-    background-color: #f0f0f0;
+    background-image: url(img/usuarioFondo.png);
 }
 
 
@@ -113,80 +113,77 @@
     box-shadow: none;
 }
 
-/* PORTADA DE LA PÁGINA WEB*/
-#portada {
-    overflow: hidden;
-    height: 100%;
-}
 
-@media (max-width:640px){
-    #portada img{
-    width: 200%;
-    margin-left:-50px;
-    }
-}
-
-
-@media (min-width:641px){
-    #portada img{
-    width: 100%;
-}
-}
-
-
-/* SECCIÓN PRODUCTOS */
-#fotos-inicio {
-    padding: 10px;
-    margin: 10px;
-}
-
-
-.sinborde{
-    border:0px;
-}
-
-#fotos-inicio h1, h6{
-    font-family: "Poppins", sans-serif;
-    color: rgb(97, 97, 97);
-    font-weight: 600;
-    font-size: 160%;
+/*Fomulario*/
+#contacto h2{
     text-align: center;
-    font-style: normal;
 }
 
-#boton1, #boton2, #boton3, #boton4{
-    background-color: #f0f0f0;
-    border:0px;
-    color: rgb(97, 97, 97);
-}
+#contacto{
+    display: flex;
+    flex-direction: column;       
+    align-items: center;  
+    height: 74vh;  
+    width: 60vh;          
+    padding: 30px;
+    margin-top: 20px;
+    width:70%;
+    color: rgb(107, 107, 107);
+    background-color:rgba(255, 255, 255, 0.881);
+    border-radius: 2%;
+    }
 
 @media (max-width:640px){
-    .card{
-        max-width: 60%;
-        margin: 10px auto;
-        text-align: center;
+    #contacto{
+    margin-left: 16%;    
     }
-    
+
 }
 
 @media (min-width:641px){
-    .card{
-        max-width: 100%;
-        margin: 0 auto;
-        text-align: center;
+    #contacto{
+    margin-left: 16%;
     }
 }
 
-/*FOOTER Y CONTACTO*/
-footer{
-    display: flex;
-    font-family: "Poppins", sans-serif;
-    color: rgb(97, 97, 97);
-    font-weight: 400;
-    font-size: 14px;
-    font-style: normal;
-    padding: 30px;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: rgb(224, 224, 224);
+
+#contacto input {
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    outline: none;
+    background-color: rgb(247, 247, 247);
+    color: rgb(107, 107, 107);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+#asunto{
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    outline: none;
+    background-color: rgb(247, 247, 247);
+    color: rgb(107, 107, 107);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+#botonEnviar{
+    color:rgba(86, 86, 86, 0.9);
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    border-color: white;
+}
+
+/*MENSAJE DE EXITO*/
+#mensaje {
+    position: fixed;
+    top: 100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background-color: #d4edda; 
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px 20px;
 }

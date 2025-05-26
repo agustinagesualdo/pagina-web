@@ -113,80 +113,15 @@
     box-shadow: none;
 }
 
-/* PORTADA DE LA PÁGINA WEB*/
-#portada {
-    overflow: hidden;
-    height: 100%;
+/*FORMATO DEL TEXTO*/
+#contenedorCarrito{
+    margin-top: 50px;
+    margin-left: 20px;
 }
 
-@media (max-width:640px){
-    #portada img{
-    width: 200%;
-    margin-left:-50px;
-    }
-}
-
-
-@media (min-width:641px){
-    #portada img{
-    width: 100%;
-}
-}
-
-
-/* SECCIÓN PRODUCTOS */
-#fotos-inicio {
-    padding: 10px;
-    margin: 10px;
-}
-
-
-.sinborde{
-    border:0px;
-}
-
-#fotos-inicio h1, h6{
-    font-family: "Poppins", sans-serif;
-    color: rgb(97, 97, 97);
+#contenedorCarrito label{
     font-weight: 600;
-    font-size: 160%;
-    text-align: center;
-    font-style: normal;
+    font-size: 20px;
 }
 
-#boton1, #boton2, #boton3, #boton4{
-    background-color: #f0f0f0;
-    border:0px;
-    color: rgb(97, 97, 97);
-}
 
-@media (max-width:640px){
-    .card{
-        max-width: 60%;
-        margin: 10px auto;
-        text-align: center;
-    }
-    
-}
-
-@media (min-width:641px){
-    .card{
-        max-width: 100%;
-        margin: 0 auto;
-        text-align: center;
-    }
-}
-
-/*FOOTER Y CONTACTO*/
-footer{
-    display: flex;
-    font-family: "Poppins", sans-serif;
-    color: rgb(97, 97, 97);
-    font-weight: 400;
-    font-size: 14px;
-    font-style: normal;
-    padding: 30px;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: rgb(224, 224, 224);
-}

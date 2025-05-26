@@ -173,3 +173,18 @@
     border-radius: 10px;
     border-color: white;
 }
+
+
+/*MENSAJE DE EXITO*/
+#mensaje {
+    position: fixed;
+    top: 100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background-color: #d4edda; 
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px 20px;
+}

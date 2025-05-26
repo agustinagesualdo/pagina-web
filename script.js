@@ -9,3 +9,6 @@ hamburguesa.addEventListener('click', function(){
     botonCerrar.style.outline = 'none';
     botonCerrar.style.boxShadow ='none';
 })
+
+// FUNCION PARA AGREGAR PRODUCTOS AL CARRITO Y QUE SE GUARDEN
+

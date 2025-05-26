@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="nosotros.css">
+    <link rel="stylesheet" href="crearCuenta.css">
     <title>Riche - Shop Online Argentina</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,49 +46,40 @@
         </div>
     </nav>
 
-    <!-- PORTADA -->
-    <div id="portada">
-        <img src="img/portada_nosotros_compu.png" alt="" id="compu">
-        <img src="img/portada_nosotros_celu.png" alt="" id="celu">
-    </div>
-    <br><br><br><br><br>
-    
-    <!-- SOBRE NOSOTROS -->
-    <div class="container-fluid p-0 m-0">
-        <div class="row g-0 align-items-center" id="nosotros" >
-            <div class="col-md-4">
-                <img src="img/nosotros1.png" class="img-fluid w-100 h-100 object-fit-cover" alt="">
-            </div>
-            <div class="col-md-8 p-4 bg-white">
-                <div class="card-body">
-                    <h5 class="card-title text-center fw-bold">¿Quiénes somos?</h5>
-                    <p class="card-text">Somos una marca de accesorios pensada para mujeres que buscan expresar su estilo con elegancia, frescura y autenticidad. Inspirados en la estética mediterránea, el arte y la naturaleza, cada pieza está diseñada cuidadosamente para resaltar lo único en cada persona.</p>
-                    <p class="card-text">RICHE es más que una marca, es una forma de vivir con estilo y libertad.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <br><br><br><br>
-    <div id = 'fotoNosotros'>
-        <a href="productos.html"><img src="img/nosotros2.png" alt=""></a>
-    </div>
-
-
-    <br>
-    <br>
-    <footer>
-        <div>
-            <h4>Contacto</h4>
+    <!-- FORMULARIO -->
+    <div id="contacto">
+        <form id="formulario">
+            <h2>Te damos la bienvenida!</h2>
             <br>
-            <p>mail: richeinfo@gmail.com</p>
-            <p>instagram: @richeoficial</p>
-            <p>whatsapp: +54 9 11 2233 4455</p>
+            <label>Nombre completo:</label>
+            <input type='text' id="nombre">
+            <br>
+            <br>
+            <label>Mail:</label>
+            <input type='text' id="mail">
+            <br>
+            <br>
+            <label>Fecha de nacimiento:</label>
+            <input type='date' id="fecha">
+            <br>
+            <br>
+            <label>Contaseña:</label>
+            <input type="text" id="contrasena">
+            <br>
+            <br>
+            <button id='botonEnviar'>Crear cuenta</button>
+        </form>
+    </div>
+    <div id="mensaje" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Gracias por tu reclamo</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
-        <div id="marca">
-            RICHE® 
+        <div class="toast-body">
+            El reclamo se ha enviado con éxito, te vamos a contactar pronto!
         </div>
-    </footer>
-
+    </div>  
+    <script src="crearCuenta.js"></script>
+    
 </body>
 </html>
