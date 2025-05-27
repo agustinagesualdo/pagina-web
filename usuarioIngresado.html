@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="usuario.css">
+    <link rel="stylesheet" href="usuarioIngresado.css">
     <title>Riche - Shop Online Argentina</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,36 +46,38 @@
         </div>
     </nav>
 
-    <!-- FORMULARIO -->
-    <div id="contacto">
-        <form id="formulario">
-            <h2>Iniciar Sesion</h2>
-            <br>
-            <label>Mail:</label>
-            <input type='text' id="mail">
-            <br>
-            <br>
-            <label>Contaseña:</label>
-            <input type="text" id="contrasena">
-            <br>
-            <br>
-            <label>¿No tenes cuenta todavía?</label>
-            <a href="crearCuenta.html" id="link">Crea tu cuenta</a>
-            <br>
-            <button id='botonIniciar'>Enviar</button>
-        </form>
+    <!-- PORTADA -->
+    <div id="portada">
+        <img src="img/portada_miUsuario.png" alt="">
     </div>
-    <div id="mensajeIniciarSesion" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-            <strong class="me-auto">Te damos la bienvenida nuevamente</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-        <div class="toast-body">
-            Se inicio sesión correctamente!
-        </div>
-    </div>   
+    <br><br><br><br><br>
     
-    <script src="usuario.js"></script>
+    <!-- SOBRE NOSOTROS -->
+    <div id="contenedorUsuario">
+        <div id='texto'>
+            <br><br><br>
+            <h5 id="saludo"></h5>
+            <br><br>
+            <p id="datos">Estos son tus datos: </p>
+            <p class='datosUsuario' id="mail"></p>
+            <br>
+            <p class='datosUsuario' id="contrasena"></p>
+            <br>
+            <p class='datosUsuario' id="fecha"></p>
+            <br><br>
+            <button class="btn btn-danger ms-4" id="cerrarSesion">Cerrar sesión</button>
+            <br><br>
+        </div>
+        <div id="imagen">
+            <img src="img/usuario.png">
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+
+    <br>
+    <script src="usuarioIngresado.js"></script>
+
 </body>
 </html>
-

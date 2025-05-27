@@ -64,19 +64,19 @@
             <br>
             <br>
             <label>Contaseña:</label>
-            <input type="text" id="contrasena">
+            <input type="text" id="contrasena" placeholder="Minimo 8 caracteres">
             <br>
             <br>
-            <button id='botonEnviar'>Crear cuenta</button>
+            <button id='botonCrear'>Crear cuenta</button>
         </form>
     </div>
-    <div id="mensaje" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div id="mensajeCrearCuenta" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
-            <strong class="me-auto">Gracias por tu reclamo</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <strong class="me-auto">Usuario registrado con éxito</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" id="cerrarCrearCuenta"></button>
         </div>
         <div class="toast-body">
-            El reclamo se ha enviado con éxito, te vamos a contactar pronto!
+            Ya podés comprar!
         </div>
     </div>  
     <script src="crearCuenta.js"></script>

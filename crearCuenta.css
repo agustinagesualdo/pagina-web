@@ -167,7 +167,7 @@
     font-size: 12px;
 }
 
-#botonEnviar{
+#botonCrear{
     color:rgba(86, 86, 86, 0.9);
     font-family: 'Poppins', sans-serif;
     border-radius: 10px;
@@ -175,7 +175,7 @@
 }
 
 /*MENSAJE DE EXITO*/
-#mensaje {
+#mensajeCrearCuenta {
     position: fixed;
     top: 100px; 
     left: 50%;
