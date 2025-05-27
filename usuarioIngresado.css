@@ -120,53 +120,80 @@
 }
 
 @media (max-width:640px){
-    #celu {
-        display: inline;
+    #portadaCelu {
+        display: block;
+        width: 300%;
+        margin-left: -60px;
     }
-    #compu {
+    #portadaCompu {
         display: none;
     }
-    #portada img {
-        width: 300%;
-        margin-left: -7px;
-    }
+
 }
 
 
 @media (min-width:641px){
-    #celu {
+    #portadaCelu {
         display: none;
     }
-    #compu {
-        display: inline;
-    }
-    #portada img {
+    #portadaCompu {
+        display: block;
         width: 100%;
     }
-
 }
 /*USUARIO*/
 #contenedorUsuario {
     display:flex;
-    justify-content: space-between;
     flex-direction: row;
     width: 100%;
-    margin: 0;
-    background-color: white; 
-    padding: 10px; 
-    align-items: center; 
+    background-color: rgba(244, 244, 244, 0.918);
+    align-items:flex-start;
+    padding: 15px; 
+}
+
+#texto {
+    width: 60%;
+    margin: 30px;
+}
+
+#imagen {
+    width: 40%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
 }
 
 @media (max-width:640px){
+    #celu {
+        display: block;
+        width: 300%;
+        height:auto;
+    }
+    #compu {
+        display: none;
+    }
     #contenedorUsuario {
-        width: 80%;
+        flex-direction: column;
+        overflow:hidden;
+        margin:0;
+        padding: 0;
+    }
+    #imagen {
+        width: 200%;
+        margin:0;
     }
 }
 
 
 @media (min-width:641px){
-    #contenedorUsuario{
-        width: 100%;
+    #celu {
+        display: none;
+    }
+    #compu {
+        display: block;
+        width:100%;
+        height:auto;
     }
 }
 
@@ -179,11 +206,12 @@
     font-style: normal;
 }
 #imagen img{
-    width:300px;
+    width: 100%;
+    height: auto;
 }
 
 #datos{
-    margin-left:4%;
+    margin-left:10%;
     text-decoration: underline;
 }
 
@@ -197,6 +225,14 @@
 }
 
 .datosUsuario{
-    margin-left:7%;
+    margin-left:20%;
 }
 
+#cerrarSesion {
+    margin-left: auto;
+    background-color: rgba(202, 202, 202, 0.874);
+    border-radius: 5px;
+    border-width: 0px;
+    display: block;
+    color: rgb(97, 97, 97);
+}

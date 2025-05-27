@@ -23,6 +23,14 @@ document.getElementById('botonIniciar').addEventListener('click', function(e) {
         if (usuario.contrasena === contrasena) {
             localStorage.setItem("usuarioActual", JSON.stringify(usuario)); 
             mostrarMensaje();
+            const usuarioActual = localStorage.getItem("usuarioActual");
+            if (usuarioActual) {
+                const usuario = JSON.parse(localStorage.getItem("usuarioActual"));
+            if (usuario) {
+                window.location.href = "usuarioIngresado.html"; 
+            }
+            }
+
         } else {
             alert("Contraseña incorrecta");
         }

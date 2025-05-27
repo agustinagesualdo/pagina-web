@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('saludo').innerHTML = `Hola ${usuario.nombre}!`;
         document.getElementById ('mail').innerHTML = `Mail: ${usuario.mail}`;
         document.getElementById('fecha').innerHTML = `Fecha de nacimiento: ${usuario.fecha}`;
-        document.getElementById ('contrasena').innerHTML = `Contrasena: ${usuario.contrasena}`;
+        document.getElementById ('contrasena').innerHTML = `Contraseña: ${usuario.contrasena}`;
     }
 });
 

@@ -19,7 +19,7 @@ document.getElementById('botonCrear').addEventListener ('click', function (e){
             localStorage.setItem("usuarioActual", JSON.stringify(nuevoUsuario)); // para login automático
             mostrarMensaje();
             document.getElementById('cerrarCrearCuenta').addEventListener('click', function(){
-                window.location.href = "usuario.html";
+                window.location.href = "usuarioIngresado.html";
             })
         }else{
             alert('Ya se ha registrado ese mail')
