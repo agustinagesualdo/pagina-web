@@ -123,7 +123,7 @@
     #portadaCelu {
         display: block;
         width: 300%;
-        margin-left: -60px;
+        margin-left: -15%;
     }
     #portadaCompu {
         display: none;
@@ -228,11 +228,90 @@
     margin-left:20%;
 }
 
+#filaCerrarSesion{
+    display: flex;
+    justify-content: flex-end;
+    width:100%;
+}
+
 #cerrarSesion {
-    margin-left: auto;
-    background-color: rgba(202, 202, 202, 0.874);
-    border-radius: 5px;
-    border-width: 0px;
-    display: block;
+    padding: 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(215, 104, 104);
+    color: rgb(255, 255, 255);
+    font-weight: 650;
+}
+
+.botones {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(223, 223, 223);
     color: rgb(97, 97, 97);
+    font-weight: 650;
+    font-size: small;
+}
+
+.botones:hover {
+    background-color: rgb(229, 223, 216);
+}
+#cerrarSesion:hover {
+    background-color: rgb(227, 109, 109);;
+}
+
+#botonOcultar {
+    display: none;
+}
+
+.campoContra {
+    display:flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+/* SECCIÓN TE PODRÍA INTERESAR */
+
+#contenedorProductos {
+    padding: 30px;
+    margin: 10px;
+}
+
+.sinborde{
+    border:0px;
+}
+
+#fotos-inicio h1{
+    font-family: "Poppins", sans-serif;
+    color: rgb(97, 97, 97);
+    font-weight: 600;
+    font-size: 160%;
+    text-align: center;
+    font-style: normal;
+}
+
+#boton1, #boton2, #boton3, #boton4{
+    background-color: #f0f0f0;
+    border:0px;
+    color: rgb(97, 97, 97);
+}
+
+@media (max-width:640px){
+    .card{
+        max-width: 60%;
+        margin: 10px auto;
+        text-align: center;
+    }
+    
+}
+
+@media (min-width:641px){
+    .card{
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
