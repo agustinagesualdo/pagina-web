@@ -115,13 +115,51 @@
 
 /*FORMATO DEL TEXTO*/
 #contenedorCarrito{
-    margin-top: 50px;
-    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 100%;
+    gap: 10px; 
+    
 }
 
-#contenedorCarrito label{
+#titulo label{
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 19px;
+    color: #979797;
+    font-weight: 500;
 }
 
+
+@media (max-width:640px){
+    #icono{
+    width: 30%;
+    }
+
+}
+
+@media (min-width:641px){
+    #icono{
+    width: 15%;
+    }
+
+}
+
+#titulo {
+    margin-top: 10px;
+    width: 40%;
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+#productos{
+    padding: 10px;
+    color: #979797;
+}
+
+#productos a {
+    color: #2e2e2e;
+}
 
