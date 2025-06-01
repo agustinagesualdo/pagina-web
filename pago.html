@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="usuarioIngresado.css">
+    <link rel="stylesheet" href="pago.css">
     <title>Riche - Shop Online Argentina</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,85 +60,41 @@
             </div>
         </div>
     </div>
-
-    <!-- PORTADA -->
-    <div id="portada">
-        <img src="img/portada_miUsuario.png" alt="" id='portadaCompu'>
-        <img src="img/portada_miUsuarioCelu.png" alt="" id="portadaCelu">
-    </div>
-    <br><br><br><br><br>
-    
-    <!-- SOBRE EL USUARIO -->
-    <div id="contenedorUsuario">
-        <div id='texto'>
-            <br><br><br>
-            <h5 id="saludo"></h5>
-            <br><br>
-            <p id="datos">Estos son tus datos: </p>
-            <p class='datosUsuario' id="mail"></p>
-            
+    <!-- FORMULARIO ENVIO DE SOLICITUD DE COMPRA-->
+    <div id="solicitud">
+        <form id="formulario">
+            <h2>Orden de compra</h2>
             <br>
-            <div class="campoContra">
-                <p class='datosUsuario' id="contrasena">Contraseña: ********</p>
-                <button id="botonMostrar" class="botones">Mostrar</button>
-                <button id="botonOcultar" class="botones">Ocultar</button>
-            </div>
+            <label>Nombre completo:</label>
+            <input type='text' id="nombre">
             <br>
-            <p class='datosUsuario' id="fecha"></p>
-            <br><br>
-            <div id="filaCerrarSesion">
-                <button class="datosUsuario" id="cerrarSesion">Cerrar sesión</button>
-            </div>
-            <br><br>
-        </div>
-        <div id="imagen">
-            <img src="img/login.png" alt="" id="compu">
-            <img src="img/loginCelu.png" alt="" id="celu">
-        </div>
+            <br>
+            <label>Teléfono contacto:</label>
+            <input type="number" id="telefono" placeholder="Minimo 8 números">
+            <br>
+            <br>
+            <label>Medio de pago:</label>
+            <select id="medio" name="asunto">
+                <option value = '' > - Seleccione medio de pago - </option>
+                <option value='credito'>Tarjeta de crédito</option>
+                <option value='debito'>Tarjeta de débito</option>
+                <option value='transferencia'>Transferencia</option>
+            </select>
+            <br>
+            <br>
+            <button id='botonEnviar'>Pagar</button>
+        </form>
     </div>
-
-    <br><br><br><br>
-    <!-- SECCIÓN TE PODRÍA INTERESAR -->
-    <section id="fotos-inicio">
-        <h1 class="titulo">Te podría interesar...</h1>
-        <br>
-        <div class="row justify-content-center" id="contenedorProductos">
-            <div class="col-12 col-md-3 mb-3">
-                <div class="card sinborde">
-                    <img src="img/collard2.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Collar colors</h5>
-                        <p class="card-text">$30.000</p>
-                        <a href="#" data-id="3" class="btn btn-primary botonAgregar" id="boton1">Agregar al carrito</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-3 mb-3">
-                <div class="card sinborde">
-                    <img src="img/pulserad3.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Mix Pulseras Boho Chic</h5>
-                        <p class="card-text">$20.000</p>
-                        <a href="#" data-id="7" class="btn btn-primary botonAgregar" id="boton2">Agregar al carrito</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-3 mb-3">
-                <div class="card sinborde">
-                    <img src="img/anillop2.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Pack Anillos Soft</h5>
-                        <p class="card-text">$22.000</p>
-                        <a href="#" data-id="12" class="btn btn-primary botonAgregar" id="boton3">Agregar al carrito</a>
-                    </div>
-                </div>
-            </div>
+    <div id="mensaje" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Gracias por tu compra!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
-    </section>
-
-
-    <br>
-    <script src="usuarioIngresado.js"></script>
+        <div class="toast-body">
+            Tu orden de compra se realizó con éxito! Pronto te estaremos enviando tu pedido
+        </div>
+    </div>    
     <script src="carrito.js"></script>
+    <script src="pago.js"></script>
 </body>
 </html>

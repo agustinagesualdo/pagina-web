@@ -6,14 +6,11 @@
     color: rgb(97, 97, 97);
     font-weight: 400;
     font-style: normal;
-    background-color:rgb(205, 222, 218);
+    background-color: #b0dede;
 }
 
 
 /* BARRA DE NAVEGACIÓN */
-#contenedor{
-    background-color: white;
-}
 
 #sticky{
     position: sticky;
@@ -60,9 +57,6 @@
     height:70%;
 }
 
-#carrito img {
-    height: 80px;
-}
 #usuario img {
     height: 80px;
 }
@@ -176,40 +170,41 @@
     background-color: rgb(235, 255, 228);
 }
 
-/*FORMULARIO PARA INICIAR SESIÓN*/
-#contacto h2{
+
+/*Fomulario*/
+#solicitud h2{
     text-align: center;
 }
 
-#contacto{
+#solicitud{
     display: flex;
     flex-direction: column;       
     align-items: center;  
-    height: 50vh;  
-    width: 40vh;          
+    height: 58vh;  
+    width: 60vh;          
     padding: 30px;
-    margin-top: 80px;
+    margin-top: 50px;
     width:70%;
-    background-color: rgba(255, 255, 255, 0.895);
-    color: rgb(107, 107, 107);
+    background-color: #89cdcd;
+    color: whitesmoke;
     border-radius: 2%;
     }
 
 @media (max-width:640px){
-    #contacto{
+    #solicitud{
     margin-left: 16%;    
     }
 
 }
 
 @media (min-width:641px){
-    #contacto{
+    #solicitud{
     margin-left: 16%;
     }
 }
 
 
-#contacto input {
+#solicitud input {
     border: 1px solid #ccc; 
     border-radius: 5px;
     outline: none;
@@ -219,7 +214,7 @@
     font-size: 12px;
 }
 
-#asunto{
+#medio{
     border: 1px solid #ccc; 
     border-radius: 5px;
     outline: none;
@@ -229,19 +224,15 @@
     font-size: 12px;
 }
 
-#botonIniciar{
+#botonEnviar{
     color:rgba(86, 86, 86, 0.9);
     font-family: 'Poppins', sans-serif;
     border-radius: 10px;
     border-color: white;
 }
 
-#link{
-    color: rgb(115, 131, 118);
-}
-
 /*MENSAJE DE EXITO*/
-#mensajeIniciarSesion {
+#mensaje {
     position: fixed;
     top: 100px; 
     left: 50%;

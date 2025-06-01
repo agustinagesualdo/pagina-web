@@ -74,11 +74,11 @@
 }
 
 @media (max-width:640px){
-    #hamburguesa { order: 0; }
-    #logo { order: 1; }
-    #usuario { order: 2; }
-    #carrito { order: 3; }
-    #navbarSupportedContent { order: 4; }
+    #hamburguesa {order: 0;}
+    #logo {order: 1;}
+    #usuario {order: 2;}
+    #carrito {order: 3;}
+    #navbarSupportedContent {order: 4;}
 
     #logo, #usuario, #carrito {
         margin: 0 5px;
@@ -92,17 +92,18 @@
 }
 
 @media (min-width:641px){
-    #hamburguesa { order: 0; } 
-    #logo { order: 0; }
-    #navbarSupportedContent { order: 1; }
-    #usuario { order: 2; }
-    #carrito { order: 3; }
+    #hamburguesa {order: 0;} 
+    #logo {order: 0;}
+    #navbarSupportedContent {order: 1;}
+    #usuario {order: 2;}
+    #carrito {order: 3;}
 
     .container-fluid {
         justify-content: space-between;
     }
 
 }
+
 
 #hamburguesa{
     border:0px;
@@ -111,6 +112,69 @@
 #hamburguesa:focus{
     outline: none;
     box-shadow: none;
+}
+
+/*CARRITO DESPLEGABLE*/
+.offcanvas-end {
+    width: 250px;
+}
+
+#botonCarrito{
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+}
+#imagenCarrito{
+    height: 80px
+}
+
+#carritoOffcanvas{
+    background-color: rgb(255, 255, 255);
+}
+
+.botonDisminuir, .botonAumentar{
+    outline: none;
+    box-shadow: none;
+    border-radius: 4px;
+    background-color: rgb(204, 238, 255);
+    width: 50px;
+    height: 30px;
+    border: none;
+}
+
+.botonesProducto p{
+    width: 60%;
+    margin-top: 15px;
+}
+.botonesProducto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#botonPagar, #botonEliminarTodos{
+    outline: none;
+    box-shadow: none;
+    border-radius: 4px;
+    width: 140px;
+    height: 30px;
+    border: none;
+}
+
+#contenedorBotonesEdicion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#botonEliminarTodos{
+    background-color: rgb(255, 219, 219);
+}
+#botonPagar{
+    background-color: rgb(235, 255, 228);
 }
 
 /* PORTADA DE LA PÁGINA WEB*/

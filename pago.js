@@ -1,23 +1,22 @@
-let listaReclamos = [];
+let listaPedidos = [];
 
 const botonEnviar = document.getElementById ('botonEnviar').addEventListener ('click', function (event){
     event.preventDefault();
     const nombre = document.getElementById('nombre').value;
-    const mail = document.getElementById('mail').value.trim();
     const telefono = document.getElementById('telefono').value.trim();
-    const asunto = document.getElementById('asunto').value;
+    const medio = document.getElementById('medio').value;
     
-    let valido = validarEntrada (nombre, mail, telefono, asunto);
+    let valido = validarEntrada (nombre, telefono, medio);
     if (valido) {
-        enviarReclamo (nombre, mail, telefono, asunto);
+        enviarOrden (nombre, telefono, medio);
         mostrarMensaje();
     }else{
         alert ('Chequea bien todos los campos! ')
     }
 })
 
-function validarEntrada (nom, mail, tel, asunto){
-    if ((nom.trim() === '') || (mail === '') || (tel === '') || (asunto === '')){
+function validarEntrada (nom, tel, medio){
+    if ((nom.trim() === '') || (tel === '') || (medio === '')){
         return false;
     }else{
         // VALIDO QUE EL NOMBRE NO TENGA NUMEROS NI CARACTERES RAROS
@@ -31,27 +30,18 @@ function validarEntrada (nom, mail, tel, asunto){
         if (tel.length< 8){
             return false;
         }
-        // VALIDO QUE EL MAIL TENGA UN @ Y QUE DSP TENGA UN . 
-        let indiceArroba = mail.indexOf('@');
-        if (indiceArroba === -1) {
-            return false;
-        }
-        let indicePuntoDespues = mail.indexOf('.', indiceArroba);
-        if (indicePuntoDespues === -1) {
-            return false;
-        }
         return true
     }
 }
 
-// HAGO UNA LISTA CON LOS RECLAMOS 
-function enviarReclamo(nombre, mail, telefono, asunto){
-    let reclamo = {nombre: nombre, mail: mail, telefono:telefono, asunto:asunto};
-    listaReclamos.push (reclamo);
-    console.log (listaReclamos)
+// HAGO UNA LISTA CON LOS PEDIDOS 
+function enviarOrden(nombre, telefono, medio){
+    let orden = {nombre: nombre, telefono:telefono, medio:medio};
+    listaPedidos.push (orden);
+    console.log (listaPedidos);
 }
 
-// MUESTRO AL USUARIO QUE SE MANDO BIEN EL RECLAMO
+// MUESTRO AL USUARIO QUE SE MANDO BIEN EL PEDIDO
 function mostrarMensaje(){
     const mensajeExito = document.getElementById('mensaje');
     const toast = new bootstrap.Toast(mensajeExito); 

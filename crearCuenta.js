@@ -9,15 +9,18 @@ document.getElementById('botonCrear').addEventListener ('click', function (e){
 
     let existe = verificarUsuario (usuario);
     let valido = validarIngreso(nombre, mail, contrasena, fecha);
-    
+
+    // AVISO SI FALTAN COMPLETAR DATOS
     if (!valido){
         alert ('Chequear los campos!');
     }else{
-        if (!existe){
+        if (!existe){ // VERIFICO QUE NO HAYA UN USUARIO REGISTRADO CON ESE MAIL 
             let nuevoUsuario = {nombre:nombre, mail:mail, contrasena:contrasena, fecha:fecha}
-            localStorage.setItem("usuario_" + mail, JSON.stringify(nuevoUsuario)); // clave única por mail
-            localStorage.setItem("usuarioActual", JSON.stringify(nuevoUsuario)); // para login automático
+            localStorage.setItem("usuario_" + mail, JSON.stringify(nuevoUsuario));
+            localStorage.setItem("usuarioActual", JSON.stringify(nuevoUsuario)); 
+            // AVISO QUE SE CREO EL USUARIO
             mostrarMensaje();
+            // CUANDO CIERRE EL TOAST QUIERO QUE LO REDIRIGA A LA PAGINA DEL USUARIO INGRESADO 
             document.getElementById('cerrarCrearCuenta').addEventListener('click', function(){
                 window.location.href = "usuarioIngresado.html";
             })
@@ -28,37 +31,48 @@ document.getElementById('botonCrear').addEventListener ('click', function (e){
 
 })
 
-function verificarUsuario(user) {
-    let existe = false;
+// VALIDO QUE NO HAYA UN USUARIO CON ESE MAIL YA  
+function obtenerUsuariosGuardados() {
+    let usuarios = [];
+
     for (let i = 0; i < localStorage.length; i++) {
         let clave = localStorage.key(i);
-        if (clave.startsWith("usuario_")) {
-            let dato = JSON.parse(localStorage.getItem(clave));
-            if (dato.mail === user.mail) {
-                existe = true;
-                break;
-            }
+
+        // GUARDO CADA MAIL DEL USUARIO (LOS HABIA GUARDADO EN FORMATO usuario_mail)
+        if (clave.slice(0, 8) === "usuario_") {
+            let datos = JSON.parse(localStorage.getItem(clave));
+            usuarios.push(datos);
         }
     }
-    return existe;
+
+    return usuarios;
 }
 
+function verificarUsuario(mailBuscado) {
+    // ME FIJO SI YA HAY UN USUARIO EN LA LISTA DE LOS USUARIOS GUARDADOS CON ESE MAIL
+    const usuarios = obtenerUsuariosGuardados();
+
+    return usuarios.some(usuario => usuario.mail === mailBuscado);
+}
+
+// VALIDO LOS INGRESOS
 function validarIngreso (nombre, mail, contra, fecha){
+    // CHEQUEO QUE NADA ESTE VACIO
     if ((nombre.trim() === '') || (mail === '') || (contra === '') || (fecha === '')){
         return false;
     }else{
-        /*Chequeo el nombre*/
+        // CHEQUEO QUE EL NOMBRE NO TENGA NÚMEROS NI OTROS CARACTERES
         for (let i = 0; i < nombre.length; i++) {
             let letra = nombre[i];
             if (!((letra >= 'a' && letra <= 'z') || (letra >= 'A' && letra <= 'Z') || letra === ' ')) {
                 return false;
             }
         }
-        /*Chequeo la contra*/
+        // CHEQUEO QUE LA CONTRASENA TENGA MAS DE 8 DIGITOS
         if (contra.length< 8){
             return false;
         }
-        /*Chequeo el mail*/
+        // CHEQUEO QUE EL MAIL TENGA UN @ Y UN .
         let indiceArroba = mail.indexOf('@');
         if (indiceArroba === -1) {
             return false;
@@ -72,6 +86,7 @@ function validarIngreso (nombre, mail, contra, fecha){
 
 }
 
+// AVISO AL USUARIO QUE YA SE CREO EL USUARIO
 function mostrarMensaje(){
     const toastEl = document.getElementById('mensajeCrearCuenta');
     const toast = new bootstrap.Toast(toastEl);
