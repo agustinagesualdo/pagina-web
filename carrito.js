@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const botonesAgregar = document.querySelectorAll('.botonAgregar');
 
     botonesAgregar.forEach(boton => {
+    let cambioColor = false;
     boton.addEventListener('click', function (e) {
         e.preventDefault();
         const id = parseInt(this.getAttribute('data-id')); 

@@ -224,6 +224,10 @@
     color: rgb(97, 97, 97);
 }
 
+#boton1:hover, #boton2:hover, #boton3:hover, #boton4:hover{
+    background-color: rgb(236, 248, 255);
+}
+
 @media (max-width:640px){
     .card{
         max-width: 60%;
