@@ -21,12 +21,10 @@ document.addEventListener('DOMContentLoaded', function () {
     botonesAgregar.forEach(boton => {
     boton.addEventListener('click', function (e) {
         e.preventDefault();
-        const id = parseInt(this.getAttribute('data-id'));
+        const id = parseInt(this.getAttribute('data-id')); 
         agregarAlCarrito(id);
     });
     });
-
-  // CUANDO TOCO EL CARRITO QUIERO QUE ME MUESTRE LO QUE AGREGO EL USUARIO
     document.getElementById("carritoOffcanvas").addEventListener("show.bs.offcanvas", function () {
     mostrarCarrito();
     });
@@ -39,7 +37,7 @@ function agregarAlCarrito(indice) {
     const itemEnCarrito = carrito.find(p => p.id === indice);
     if (itemEnCarrito) {
         itemEnCarrito.cantidad += 1;
-    } else {
+    } else { 
         carrito.push({ id: producto.id, nombre: producto.nombre, precio: producto.precio, cantidad: 1});
     }
 
@@ -70,8 +68,7 @@ function mostrarCarrito() {
         `;
         contenedor.innerHTML += nuevoProducto;
     });
-
-        if (!document.getElementById('botonEliminarTodos')){
+        if (!document.getElementById('botonEliminarTodos')){ // VEO DE NO TENER LOS BOTONES CREADOS YA
             const contenedorBotonesEdicion = document.createElement ('div');
             contenedorBotonesEdicion.id = `contenedorBotonesEdicion`;
             const botonEliminarTodos = document.createElement('button');
@@ -93,12 +90,19 @@ function mostrarCarrito() {
             });
         }
 
-    // SI EL USUARIO TOCA PAGAR QUE LO LLEVE A OTRA PAGINA
+    // REDIRECCIONO A LA PAGINA PARA PAGAR SI YA ESTA LOGGEADO
     document.getElementById('botonPagar').addEventListener('click', function(){
-        window.location.href = "pago.html";
+        const usuarioIngresado = localStorage.getItem("usuarioActual");
+        if (usuarioIngresado){
+            window.location.href = "pago.html";
+        }else{
+            alert ('Por favor, inicia sesión para pagar!')
+            window.location.href = "usuario.html"; 
+        }
+        
     })
         
-    // AGREGO FUNCIONALIDADES PARA AUMENTAR/DISMINUIR CANTIDADES DE PRODUCTOS
+    // PARA LOS BOTONES DE AGREGAR Y DISMINIUR
     const botonesAumentar = document.querySelectorAll('.botonAumentar');
     const botonesDisminuir = document.querySelectorAll('.botonDisminuir');
 
@@ -119,7 +123,7 @@ function mostrarCarrito() {
             if (item.cantidad > 1) {
                 item.cantidad -= 1;
             } else {
-                carrito = carrito.filter(p => p.id !== id); // SACO AL PRODUCTO DIRECTO SI DISMINUYE -1 (PARA QUE NO QUEDE EN 0)
+                carrito = carrito.filter(p => p.id !== id); // ELIMINO DIRECTO EL PRODUCTO
             }
             localStorage.setItem('carrito', JSON.stringify(carrito));
             mostrarCarrito();
