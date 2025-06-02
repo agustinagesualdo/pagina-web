@@ -43,7 +43,8 @@ function agregarAlCarrito(indice) {
     }
 
     localStorage.setItem('carrito', JSON.stringify(carrito));
-    alert(`Se agregó "${producto.nombre}" con éxito`);
+    const item = producto.nombre;
+    mostrarMensaje(item);
 }
 
 function mostrarCarrito() {
@@ -133,4 +134,13 @@ function mostrarCarrito() {
     }
 }
 
+
+// LE AVISO AL USUARIO QUE AGREGO BIEN EL PRODUCTO
+function mostrarMensaje(item){
+    const toastEl = document.getElementById('productoAgregado');
+    const toastBody = toastEl.querySelector('.toast-body p');
+    toastBody.innerHTML = `Se agregó ${item} correctamente`;
+    const toast = new bootstrap.Toast(toastEl);
+    toast.show();
+}
 

@@ -26,12 +26,12 @@ document.getElementById('botonIniciar').addEventListener('click', function(e) {
         if (usuario.contrasena === contrasena) {
             // LO GUARDO COMO EL USUARIO ACTUAL
             localStorage.setItem("usuarioActual", JSON.stringify(usuario)); 
-            mostrarMensaje();
+            inicioSesion();
             const usuarioActual = localStorage.getItem("usuarioActual");
             window.location.href = "usuarioIngresado.html"; // QE LO REDIRECCIONE A LA PAGINA DE SU USUARIO
 
         } else {
-            alert("Contraseña incorrecta");
+            inicioIncorrecto();
         }
     } else {
         alert("Usuario no encontrado");
@@ -39,9 +39,14 @@ document.getElementById('botonIniciar').addEventListener('click', function(e) {
 });
 
 // LE AVISO AL USUARIO QUE INICIO SESIÓN
-function mostrarMensaje(){
+function inicioSesion(){
     const toastEl = document.getElementById('mensajeIniciarSesion');
     const toast = new bootstrap.Toast(toastEl);
     toast.show();
 }
 
+function inicioIncorrecto (){
+    const toastEl = document.getElementById('contraIncorrecta');
+    const toast = new bootstrap.Toast(toastEl);
+    toast.show();
+}

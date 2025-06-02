@@ -141,6 +141,10 @@
     height: 30px;
     border: none;
 }
+.botonAumentar:hover, .botonDisminuir:hover{
+    background-color: rgb(156, 222, 255);
+    font-size: 20px;
+}
 
 .botonesProducto p{
     width: 60%;
@@ -175,6 +179,15 @@
 #botonPagar{
     background-color: rgb(235, 255, 228);
 }
+#botonEliminarTodos:hover{
+    background-color: rgb(255, 159, 159);
+    font-size: 16.5px;
+}
+#botonPagar:hover{
+    background-color: rgb(190, 255, 167);
+    font-size: 16.5px;
+}
+
 
 /*FORMULARIO PARA INICIAR SESIÓN*/
 #contacto h2{
@@ -250,6 +263,20 @@
     background-color: #d4edda; 
     color: #155724;
     border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+/*MENSAJE CONTRA INCORRECTA*/
+#contraIncorrecta {
+    position: fixed;
+    top: 100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background-color: #e9d2d2; 
+    color: #571515;
+    border: 1px solid #e6c3c3;
     border-radius: 5px;
     padding: 10px 20px;
 }

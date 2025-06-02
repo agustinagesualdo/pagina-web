@@ -141,6 +141,10 @@
     height: 30px;
     border: none;
 }
+.botonAumentar:hover, .botonDisminuir:hover{
+    background-color: rgb(156, 222, 255);
+    font-size: 20px;
+}
 
 .botonesProducto p{
     width: 60%;
@@ -175,6 +179,15 @@
 #botonPagar{
     background-color: rgb(235, 255, 228);
 }
+#botonEliminarTodos:hover{
+    background-color: rgb(255, 159, 159);
+    font-size: 16.5px;
+}
+#botonPagar:hover{
+    background-color: rgb(190, 255, 167);
+    font-size: 16.5px;
+}
+
 
 /* PORTADA DE LA PÁGINA WEB*/
 #portada {
@@ -194,7 +207,6 @@
     #portada img{
     width: 100%;
 }
-
 }
 
 
@@ -223,6 +235,12 @@
     color: rgb(97, 97, 97);
 }
 
+#boton1:hover, #boton2:hover, #boton3:hover, #boton4:hover{
+    background-color: rgb(227, 245, 255);
+    color: rgb(81, 88, 107);
+    font-size: 16.2px;
+}
+
 @media (max-width:640px){
     .card{
         max-width: 60%;
@@ -239,7 +257,19 @@
         text-align: center;
     }
 }
-
+/*MENSAJE DE EXITO*/
+#productoAgregado {
+    position: fixed;
+    top: 102px; 
+    margin-left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background-color: #d4edda; 
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
 /* PARTE SUMMER*/
 #portadasummer {
     overflow: hidden;

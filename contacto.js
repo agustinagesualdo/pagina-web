@@ -10,7 +10,7 @@ const botonEnviar = document.getElementById ('botonEnviar').addEventListener ('c
     let valido = validarEntrada (nombre, mail, telefono, asunto);
     if (valido) {
         enviarReclamo (nombre, mail, telefono, asunto);
-        mostrarMensaje();
+        reclamoEnviado();
     }else{
         alert ('Chequea bien todos los campos! ')
     }
@@ -52,7 +52,7 @@ function enviarReclamo(nombre, mail, telefono, asunto){
 }
 
 // MUESTRO AL USUARIO QUE SE MANDO BIEN EL RECLAMO
-function mostrarMensaje(){
+function reclamoEnviado(){
     const mensajeExito = document.getElementById('mensaje');
     const toast = new bootstrap.Toast(mensajeExito); 
     toast.show();

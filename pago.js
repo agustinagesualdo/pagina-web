@@ -9,7 +9,7 @@ const botonEnviar = document.getElementById ('botonEnviar').addEventListener ('c
     let valido = validarEntrada (nombre, telefono, medio);
     if (valido) {
         enviarOrden (nombre, telefono, medio);
-        mostrarMensaje();
+        pagoRealizado();
     }else{
         alert ('Chequea bien todos los campos! ')
     }
@@ -42,8 +42,8 @@ function enviarOrden(nombre, telefono, medio){
 }
 
 // MUESTRO AL USUARIO QUE SE MANDO BIEN EL PEDIDO
-function mostrarMensaje(){
-    const mensajeExito = document.getElementById('mensaje');
+function pagoRealizado(){
+    const mensajeExito = document.getElementById('pagoHecho');
     const toast = new bootstrap.Toast(mensajeExito); 
     toast.show();
 }

@@ -19,7 +19,7 @@ document.getElementById('botonCrear').addEventListener ('click', function (e){
             localStorage.setItem("usuario_" + mail, JSON.stringify(nuevoUsuario));
             localStorage.setItem("usuarioActual", JSON.stringify(nuevoUsuario)); 
             // AVISO QUE SE CREO EL USUARIO
-            mostrarMensaje();
+            mostrarCuenta();
             // CUANDO CIERRE EL TOAST QUIERO QUE LO REDIRIGA A LA PAGINA DEL USUARIO INGRESADO 
             document.getElementById('cerrarCrearCuenta').addEventListener('click', function(){
                 window.location.href = "usuarioIngresado.html";
@@ -87,7 +87,7 @@ function validarIngreso (nombre, mail, contra, fecha){
 }
 
 // AVISO AL USUARIO QUE YA SE CREO EL USUARIO
-function mostrarMensaje(){
+function mostrarCuenta(){
     const toastEl = document.getElementById('mensajeCrearCuenta');
     const toast = new bootstrap.Toast(toastEl);
     toast.show();

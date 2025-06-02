@@ -141,6 +141,11 @@
     border: none;
 }
 
+.botonAumentar:hover, .botonDisminuir:hover{
+    background-color: rgb(156, 222, 255);
+    font-size: 20px;
+}
+
 .botonesProducto p{
     width: 60%;
     margin-top: 15px;
@@ -173,6 +178,15 @@
 }
 #botonPagar{
     background-color: rgb(235, 255, 228);
+}
+
+#botonEliminarTodos:hover{
+    background-color: rgb(255, 159, 159);
+    font-size: 16.5px;
+}
+#botonPagar:hover{
+    background-color: rgb(190, 255, 167);
+    font-size: 16.5px;
 }
 
 /*Fomulario*/
