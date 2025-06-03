@@ -41,13 +41,13 @@ function agregarAlCarrito(indice) {
     } else { 
         carrito.push({ id: producto.id, nombre: producto.nombre, precio: producto.precio, cantidad: 1});
     }
-
     localStorage.setItem('carrito', JSON.stringify(carrito));
     const item = producto.nombre;
     mostrarMensaje(item);
 }
 
 function mostrarCarrito() {
+    carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const contenedor = document.getElementById('listaCarrito');
     contenedor.innerHTML = ''; 
 
@@ -109,6 +109,7 @@ function mostrarCarrito() {
         const usuarioIngresado = localStorage.getItem("usuarioActual");
         if (usuarioIngresado){
             window.location.href = "pago.html";
+
         }else{
             alert ('Por favor, inicia sesión para pagar!')
             window.location.href = "usuario.html"; 

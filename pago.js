@@ -1,4 +1,5 @@
 let listaPedidos = [];
+let pedido = JSON.parse(localStorage.getItem('carrito')) || [];
 
 const botonEnviar = document.getElementById ('botonEnviar').addEventListener ('click', function (event){
     event.preventDefault();
@@ -10,6 +11,16 @@ const botonEnviar = document.getElementById ('botonEnviar').addEventListener ('c
     if (valido) {
         enviarOrden (nombre, telefono, medio);
         pagoRealizado();
+        document.getElementById('botonCerrarPago').addEventListener('click', function (){ // CUANDO CIERRE EL TOAST QUIERO REDIRIGIR EL USUARIO A LA PAGINA CON SUS DATOS
+                document.getElementById('nombre').value = '';
+                document.getElementById('telefono').value = '';
+                document.getElementById('medio').value = '';
+
+                localStorage.removeItem('carrito');
+                document.getElementById('listaCarrito').innerHTML = '';
+                mostrarCarrito();
+                window.location.href = "index.html";
+        })
     }else{
         alert ('Chequea bien todos los campos! ')
     }
@@ -35,8 +46,9 @@ function validarEntrada (nom, tel, medio){
 }
 
 // HAGO UNA LISTA CON LOS PEDIDOS 
+
 function enviarOrden(nombre, telefono, medio){
-    let orden = {nombre: nombre, telefono:telefono, medio:medio};
+    let orden = {nombre: nombre, telefono:telefono, medio:medio, carrito:pedido};
     listaPedidos.push (orden);
     console.log (listaPedidos);
 }

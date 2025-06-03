@@ -129,6 +129,7 @@
 
 #carritoOffcanvas{
     background-color: rgb(255, 255, 255);
+    z-index: 10000000;
 }
 
 .botonDisminuir, .botonAumentar{
@@ -188,34 +189,6 @@
 }
 
 
-/* PORTADA DE LA PÁGINA WEB*/
-#portada {
-    overflow: hidden;
-    height: 100%;
-}
-
-@media (max-width:640px){
-    #portadaCelu {
-        display: block;
-        width: 300%;
-        margin-left: -15%;
-    }
-    #portadaCompu {
-        display: none;
-    }
-
-}
-
-
-@media (min-width:641px){
-    #portadaCelu {
-        display: none;
-    }
-    #portadaCompu {
-        display: block;
-        width: 100%;
-    }
-}
 /*USUARIO*/
 #contenedorUsuario {
     display:flex;
@@ -224,6 +197,7 @@
     background-color: rgba(244, 244, 244, 0.918);
     align-items:flex-start;
     padding: 15px; 
+    margin-top:0px;
 }
 
 #texto {
@@ -233,7 +207,7 @@
 
 #imagen {
     width: 40%;
-    margin-top: 10px;
+    margin-top: 0px;
     display: flex;
     justify-content: center;
     margin-left: 0;
