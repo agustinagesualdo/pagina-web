@@ -132,6 +132,13 @@
     background-color: rgb(255, 255, 255);
 }
 
+#total{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 200px;
+}
+
 .botonDisminuir, .botonAumentar{
     outline: none;
     box-shadow: none;

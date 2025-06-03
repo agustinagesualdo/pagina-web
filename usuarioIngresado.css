@@ -330,6 +330,13 @@
     font-size: small;
 }
 
+#total{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 200px;
+}
+
 #boton1:hover, #boton2:hover, #boton3:hover{
     background-color: rgb(227, 245, 255);
     color: rgb(81, 88, 107);
@@ -396,11 +403,20 @@
         text-align: center;
     }
 }
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); 
+    cursor: pointer; 
+}
+
 /*MENSAJE DE EXITO*/
 #productoAgregado {
     position: fixed;
-    top: 102px; 
-    margin-left: 50%;
+    bottom: 10px; 
     transform: translateX(-50%);
     z-index: 9999;
     background-color: #d4edda; 
@@ -408,4 +424,17 @@
     border: 1px solid #c3e6cb;
     border-radius: 5px;
     padding: 10px 20px;
+}
+
+@media (max-width:640px){
+    #productoAgregado {
+        margin-left: 60%;
+    }
+    
+}
+
+@media (min-width:641px){
+    #productoAgregado {
+        margin-left: 85%;
+    }
 }

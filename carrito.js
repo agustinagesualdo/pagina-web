@@ -69,7 +69,18 @@ function mostrarCarrito() {
         </div>
         `;
         contenedor.innerHTML += nuevoProducto;
+        
     });
+    let listaPrecios = listaprecios (carrito)
+    let total = calcularTotalCarrito (listaPrecios);
+    const nuevoPrecio = `
+        <div id="total">
+            <p>Total:</p>
+            <p><strong> $${total}</strong></p>
+        </div>
+        `;
+    contenedor.innerHTML += nuevoPrecio;
+        
         if (!document.getElementById('botonEliminarTodos')){ // VEO DE NO TENER LOS BOTONES CREADOS YA
             const contenedorBotonesEdicion = document.createElement ('div');
             contenedorBotonesEdicion.id = `contenedorBotonesEdicion`;
@@ -91,6 +102,7 @@ function mostrarCarrito() {
                 mostrarCarrito();
             });
         }
+
 
     // REDIRECCIONO A LA PAGINA PARA PAGAR SI YA ESTA LOGGEADO
     document.getElementById('botonPagar').addEventListener('click', function(){
@@ -143,4 +155,24 @@ function mostrarMensaje(item){
     const toast = new bootstrap.Toast(toastEl);
     toast.show();
 }
+
+
+// CALCULAR TOTAL A PAGAR
+function listaprecios(carro) {
+    let preciototal = [];
+    for (let producto of carro) {
+        let cantidad = producto.cantidad;
+        let precioFinal = producto.precio * cantidad;
+        preciototal.push(precioFinal);
+    }
+    return preciototal;
+}
+
+
+function calcularTotalCarrito (precio){
+    let total = precio.reduce((suma, precio) => suma + precio, 0)
+    return total
+}
+
+
 

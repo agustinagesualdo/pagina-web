@@ -11,6 +11,11 @@ const botonEnviar = document.getElementById ('botonEnviar').addEventListener ('c
     if (valido) {
         enviarReclamo (nombre, mail, telefono, asunto);
         reclamoEnviado();
+        document.getElementById('nombre').value = '';
+        document.getElementById('mail').value = '';
+        document.getElementById('telefono').value = '';
+        document.getElementById('asunto').value = '';
+        
     }else{
         alert ('Chequea bien todos los campos! ')
     }

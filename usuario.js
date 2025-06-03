@@ -27,9 +27,10 @@ document.getElementById('botonIniciar').addEventListener('click', function(e) {
             // LO GUARDO COMO EL USUARIO ACTUAL
             localStorage.setItem("usuarioActual", JSON.stringify(usuario)); 
             inicioSesion();
-            const usuarioActual = localStorage.getItem("usuarioActual");
-            window.location.href = "usuarioIngresado.html"; // QE LO REDIRECCIONE A LA PAGINA DE SU USUARIO
-
+            const usuarioActual = localStorage.getItem("usuarioActual"); 
+            document.getElementById('botonCerrarInicio').addEventListener('click', function (){ // CUANDO CIERRE EL TOAST QUIERO REDIRIGIR EL USUARIO A LA PAGINA CON SUS DATOS
+                window.location.href = "usuarioIngresado.html";
+            })
         } else {
             inicioIncorrecto();
         }
@@ -40,9 +41,9 @@ document.getElementById('botonIniciar').addEventListener('click', function(e) {
 
 // LE AVISO AL USUARIO QUE INICIO SESIÓN
 function inicioSesion(){
-    const toastEl = document.getElementById('mensajeIniciarSesion');
-    const toast = new bootstrap.Toast(toastEl);
-    toast.show();
+    const toastElemento = document.getElementById('mensajeIniciarSesion');
+    const toastInicio = new bootstrap.Toast(toastElemento);
+    toastInicio.show();
 }
 
 function inicioIncorrecto (){

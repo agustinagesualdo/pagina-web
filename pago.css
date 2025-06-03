@@ -150,6 +150,12 @@
     justify-content: space-between;
     align-items: center;
 }
+#total{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 200px;
+}
 
 #botonPagar, #botonEliminarTodos{
     outline: none;
@@ -244,7 +250,7 @@
 }
 
 /*MENSAJE DE EXITO*/
-#mensaje {
+#pagoHecho {
     position: fixed;
     top: 100px; 
     left: 50%;

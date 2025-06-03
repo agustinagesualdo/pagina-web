@@ -157,6 +157,13 @@
     align-items: center;
 }
 
+#total{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 200px;
+}
+
 #botonPagar, #botonEliminarTodos{
     outline: none;
     box-shadow: none;
