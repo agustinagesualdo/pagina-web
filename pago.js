@@ -6,7 +6,7 @@ const botonEnviar = document.getElementById ('botonEnviar').addEventListener ('c
     const nombre = document.getElementById('nombre').value;
     const telefono = document.getElementById('telefono').value.trim();
     const medio = document.getElementById('medio').value;
-    
+
     let valido = validarEntrada (nombre, telefono, medio);
     if (valido) {
         enviarOrden (nombre, telefono, medio);
